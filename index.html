@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="bg-[#F0FDF4]">
     <header>
         <!-- navbar -->
         <nav>
@@ -60,34 +60,104 @@
 
 
     <!-- MAIN PART --: Trees Section -->
-    <section class="bg-[#F0FDF4]">
+    <section class="bg-[#F0FDF4] mt-24">
         <h1 class="text-3xl font-medium text-center ">Choose Your Trees</h1>
 
         <!-- catagory part (এখানে খেয়াল রাখতে হবে justify কে) -->
-        <div class="parent-div w-11/12 mx-auto mt-10 flex justify-between gap-5"> 
+        <div class="parent-div w-11/12 mx-auto mt-10 flex justify-between gap-5">
             <div>
                 <h1 class="text-xl font-medium bg-white ">Categories</h1>
                 <!-- button container এখানে -->
-                 <button id="all-btn" onclick="loadAllPlants()" class="border-2 border-green-700 w-[250px] py-2 rounded-md text-left px-4 hover:cursor-pointer ctg-class-button">All Trees
+                <button id="all-btn" onclick="loadAllPlants()"
+                    class="border-2 border-green-700 w-[250px] py-2 rounded-md text-left px-4 hover:cursor-pointer ctg-class-button">All
+                    Trees
 
-                 </button>
+                </button>
                 <div id="btn-container">
-                    
+
 
                 </div>
 
             </div>
             <!-- card গুলো এখানে -->
             <div id="card-container" class="border-2 border-red-500 grid grid-cols-3 gap-5">
-                
-                
+
+
             </div>
-            <div class="bg-white p-5">
-                <h1 class="text-2xl font-medium ">Your Cart</h1>
-                <h1 class="text-xl font-medium ">Your000000000000000Cart</h1>
+            <div class="bg-white p-5 rounded-xl ">
+                <h1 class="text-2xl font-medium w-[200px]">Your Cart</h1>
+                <!-- এখানে add to cart  -->
+                <div id="addtocart-container" class="space-y-2">
+
+
+                </div>
+
+                <div id="total-container" class="border-t-2 border-red-200 mt-2">
+                    <div class="flex justify-between">
+                        <h1 class="text-xl font-medium">Total:</h1>
+                        <p class="text-xl font-medium">$<span id="total-price">0</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About the Campaign section -->
+    <section class="mt-24">
+        <h1 class="font-semibold text-2xl text-center">About the Campaign</h1>
+        <div class="w-[1200px] mx-auto flex justify-center items-center mt-10 gap-8">
+            <img class="" src="assets/about.png" alt="">
+            <div class="text-left space-y-5">
+                <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our
+                    start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore
+                    forests, create habitats for wildlife, and combat global warming.</p>
+                <ol class="list-disc pl-5">
+                    <li>Restoration of natural habitats</li>
+                    <li>Improvement of air quality</li>
+                    <li>Support for local communities</li>
+                </ol>
             </div>
         </div>
     </section>
+
+    <!-- Our Impact section -->
+    <section class="bg-[#CFF0DC] mt-24 pt-24 pb-16">
+        <h1 class="font-semibold text-2xl text-center">Our Impact</h1>
+        <div class="w-11/12 mx-auto mt-10">
+            <div class="flex justify-center gap-12">
+                <div class="bg-white text-center p-10 w-[520px] space-y-3 rounded-xl">
+                    <h1 class="text-2xl font-medium text-green-700">500K+</h1>
+                    <p>Trees Planted</p>
+                </div>
+                <div class="bg-white text-center p-10 w-[520px] space-y-3 rounded-xl">
+                    <h1 class="text-2xl font-medium text-green-700">120+</h1>
+                    <p>Communities Involved</p>
+                </div>
+                <div class="bg-white text-center p-10 w-[520px] space-y-3 rounded-xl">
+                    <h1 class="text-2xl font-medium text-green-700">30+</h1>
+                    <p>Countries Reached</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="details-container">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
 
     <script src="script/index.js"></script>
