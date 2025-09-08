@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth</title>
     <link rel="shortcut icon" href="assets/about.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -62,51 +63,24 @@
     <section class="bg-[#F0FDF4]">
         <h1 class="text-3xl font-medium text-center ">Choose Your Trees</h1>
 
-        <!-- catagory part -->
-        <div class="parent-div w-11/12 mx-auto mt-10 flex justify-center gap-5">
+        <!-- catagory part (এখানে খেয়াল রাখতে হবে justify কে) -->
+        <div class="parent-div w-11/12 mx-auto mt-10 flex justify-between gap-5"> 
             <div>
                 <h1 class="text-xl font-medium bg-white ">Categories</h1>
                 <!-- button container এখানে -->
+                 <button id="all-btn" onclick="loadAllPlants()" class="border-2 border-green-700 w-[250px] py-2 rounded-md text-left px-4 hover:cursor-pointer ctg-class-button">All Trees
+
+                 </button>
                 <div id="btn-container">
-                    <button class="border-2 border-green-700 w-[250px] py-2 rounded-md text-left px-4">All Trees</button>
+                    
+
                 </div>
 
             </div>
             <!-- card গুলো এখানে -->
             <div id="card-container" class="border-2 border-red-500 grid grid-cols-3 gap-5">
-                <div class="card bg-white p-5 gap-3 border-2 border-blue-500">
-                    <img class="rounded-xl" src="assets/4046552.jpg" alt="">
-                    <h1 class="font-medium text-xl">Mango Tree</h1>
-                    <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense
-                        green</p>
-                    <div class="flex justify-between">
-                        <p class="text-xl bg-[#DCFCE7] rounded-full px-4 py-1 text-green-800">Fruit Tree</p>
-                        <p class="text-xl font-medium">$<span>500</span></p>
-                    </div>
-                    <button class="bg-green-700 text-white text-xl px-20 py-3 rounded-full">Add to Cart</button>
-                </div>
-                <div class="card bg-white p-5 gap-3 border-2 border-blue-500">
-                    <img src="assets/4046552.jpg" alt="">
-                    <h1 class="font-medium text-xl">Mango Tree</h1>
-                    <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense
-                        green</p>
-                    <div class="flex justify-between">
-                        <p class="text-xl bg-[#DCFCE7] rounded-full px-4 py-1 text-green-800">Fruit Tree</p>
-                        <p class="text-xl font-medium">$<span>500</span></p>
-                    </div>
-                    <button class="bg-green-700 text-white text-xl px-20 py-3 rounded-full">Add to Cart</button>
-                </div>
-                <div class="card bg-white p-5 gap-3 border-2 border-blue-500">
-                    <img src="assets/4046552.jpg" alt="">
-                    <h1 class="font-medium text-xl">Mango Tree</h1>
-                    <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense
-                        green</p>
-                    <div class="flex justify-between">
-                        <p class="text-xl bg-[#DCFCE7] rounded-full px-4 py-1 text-green-800">Fruit Tree</p>
-                        <p class="text-xl font-medium">$<span>500</span></p>
-                    </div>
-                    <button class="bg-green-700 text-white text-xl px-20 py-3 rounded-full">Add to Cart</button>
-                </div>
+                
+                
             </div>
             <div class="bg-white p-5">
                 <h1 class="text-2xl font-medium ">Your Cart</h1>
@@ -117,6 +91,7 @@
 
 
     <script src="script/index.js"></script>
+    <script src="script/another.js"></script>
 </body>
 
 </html>
