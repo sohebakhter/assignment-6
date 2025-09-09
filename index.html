@@ -63,8 +63,15 @@
     <section class="bg-[#F0FDF4] mt-24">
         <h1 class="text-3xl font-medium text-center ">Choose Your Trees</h1>
 
-        <!-- catagory part (এখানে খেয়াল রাখতে হবে justify কে) -->
-        <div class="parent-div w-11/12 mx-auto mt-10 flex flex-col md:flex-row justify-between gap-5">
+        <!-- catagory part -->
+
+        <!-- spinner part here -->
+        <section id="spinner" class="flex justify-center items-center py-10 hidden">
+            <span class="loading loading-spinner loading-xl"></span>
+        </section>
+
+        <div id="parent-div" class="parent-div w-11/12 mx-auto mt-10 flex flex-col md:flex-row justify-between gap-5">
+
             <div>
                 <h1 class="text-xl font-medium ">Categories</h1>
                 <!-- button container এখানে -->

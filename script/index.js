@@ -1,4 +1,5 @@
 const loadButtonName = () => {
+    manageSpinner(true);
     const url = `https://openapi.programming-hero.com/api/categories`
     fetch(url)
         .then(res => res.json())
@@ -13,8 +14,24 @@ const removeActive = () => {
     ctgButton.forEach(btn => btn.classList.remove('active'))
 }
 
+const manageSpinner = (status) => {
+    if (status == true) {
+        document.getElementById('spinner').classList.remove('hidden')
+        document.getElementById('card-container').classList.add('hidden')
+        document.getElementById('btn-container').classList.add('hidden')
+            // document.getElementById('total-container').classList.add('hidden')
+    }
+    else {
+        // document.getElementById('total-container').classList.remove('hidden')
+        document.getElementById('btn-container').classList.remove('hidden')
+        document.getElementById('card-container').classList.remove('hidden')
+        document.getElementById('spinner').classList.add('hidden')
+    }
+}
+
 
 const loadPlantCatagories = (id) => {
+    manageSpinner(true);
     const url = (`https://openapi.programming-hero.com/api/category/${id}`)
     fetch(url)
         .then(res => res.json())
@@ -28,7 +45,7 @@ const loadPlantCatagories = (id) => {
 }
 
 
-//all catagory এর active class কে এই জায়গা থেকে রিমুভ/add করা হইছে
+//all catagory এর "active" class রিমুভ/add
 const clickBtn = document.querySelector('#all-btn')
 clickBtn.addEventListener('click', () => {
     removeActive();
@@ -37,6 +54,7 @@ clickBtn.addEventListener('click', () => {
 
 
 const loadAllPlants = () => {
+    manageSpinner(true);
     const url = (`https://openapi.programming-hero.com/api/plants`)
     fetch(url)
         .then(res => res.json())
@@ -55,6 +73,7 @@ const loadPlantDetali = (id) => {
 }
 
 //-------------------------------------
+
 
 const displayPlantDetali = (details) => {
     console.log(details)
@@ -107,7 +126,7 @@ const displayAllPlants = (plants) => {
         button.addEventListener('click', () => {
 
             const cartContainer = document.getElementById('addtocart-container')
-            // cartContainer.innerHTML = '';
+            
 
             const cartCard = document.createElement('div')
             cartCard.innerHTML = `
@@ -132,7 +151,7 @@ const displayAllPlants = (plants) => {
                 }
             });
 
-            //এখানে আর একটা অংশ total +/adding part
+            //total: +/adding part
             function updateTotal() {
                 const prices = document.querySelectorAll('.card-price');
                 let total = 0;
@@ -149,6 +168,7 @@ const displayAllPlants = (plants) => {
         });
 
     }
+    manageSpinner(false);
 }
 
 loadAllPlants();
@@ -182,7 +202,7 @@ const displayPlantCatagories = (cards) => {
         button.addEventListener('click', () => {
 
             const cartContainer = document.getElementById('addtocart-container')
-            // cartContainer.innerHTML = '';
+
 
             const cartCard = document.createElement('div')
             cartCard.innerHTML = `
@@ -210,7 +230,7 @@ const displayPlantCatagories = (cards) => {
             });
 
 
-            //এখানে আর একটা অংশ total +/adding part
+            //total: +/adding part
             function updateTotal() {
                 const prices = document.querySelectorAll('.card-price');
                 let total = 0;
@@ -226,11 +246,12 @@ const displayPlantCatagories = (cards) => {
 
         });
     }
+    manageSpinner(false);
 
-}
+};
 
 
-// এখানে বাটন dynamic name কে শো করা হবে
+// এখানে বাটন dynamic name
 const displayButtonName = (names) => {
 
     // 1 get the container
@@ -250,9 +271,9 @@ const displayButtonName = (names) => {
 
         buttonContainer.appendChild(buttonDiv);
     }
-
+    manageSpinner(false);
 }
 
-loadButtonName(); //wow eita seita 
+loadButtonName();
 
 
