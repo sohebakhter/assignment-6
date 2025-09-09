@@ -102,11 +102,9 @@ const displayAllPlants = (plants) => {
 
         allPlant.appendChild(allPlantCard);
 
-        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        // ✅ attach listener right here
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++      
         const button = allPlantCard.querySelector('.addtocart-btn');
         button.addEventListener('click', () => {
-            // your add-to-cart logic here
 
             const cartContainer = document.getElementById('addtocart-container')
             // cartContainer.innerHTML = '';
@@ -134,7 +132,7 @@ const displayAllPlants = (plants) => {
                 }
             });
 
-            //এখানে আর একটা অংশ total jog korar part
+            //এখানে আর একটা অংশ total +/adding part
             function updateTotal() {
                 const prices = document.querySelectorAll('.card-price');
                 let total = 0;
@@ -180,10 +178,8 @@ const displayPlantCatagories = (cards) => {
         cardContainer.appendChild(cardInfo);
 
         //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        // ✅ attach listener right here
         const button = cardInfo.querySelector('.addtocart-btn');
         button.addEventListener('click', () => {
-            // your add-to-cart logic here
 
             const cartContainer = document.getElementById('addtocart-container')
             // cartContainer.innerHTML = '';
@@ -214,7 +210,7 @@ const displayPlantCatagories = (cards) => {
             });
 
 
-            //এখানে আর একটা অংশ total jog korar part
+            //এখানে আর একটা অংশ total +/adding part
             function updateTotal() {
                 const prices = document.querySelectorAll('.card-price');
                 let total = 0;
