@@ -247,7 +247,7 @@ const displayButtonName = (names) => {
         const buttonDiv = document.createElement('div')
         buttonDiv.innerHTML = `
         
-        <button id="btn-${name.id}" onclick="loadPlantCatagories(${name.id})" class="border-2 border-green-700 w-[250px] py-2 rounded-md text-left px-4 mt-1 hover:cursor-pointer ctg-class-button">${name.category_name}</button>
+        <button id="btn-${name.id}" onclick="loadPlantCatagories(${name.id})" class="w-[250px] py-2 rounded-md text-left px-4 mt-1 hover:cursor-pointer ctg-class-button">${name.category_name}</button>
 
         `
         // 3 append করতে হবে 
